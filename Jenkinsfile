@@ -8,7 +8,12 @@ pipeline{
   stages{
     stages('Build'){
       steps {
-        echo 'Build triggered by Github push or cron schedule'
+        echo 'Building the application '
+      }
+    }
+     stages('Deploy'){
+      steps {
+        echo 'Deploying the application '
       }
     }
   }
